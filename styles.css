@@ -1,0 +1,388 @@
+
+/* GENERAL - Tudo que é em comum em vários elementos */
+
+body, textarea {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #70747A;
+}
+
+/* NAVBAR */
+
+.navbar-container {
+    width: 100%;
+    height: 80px;
+    background-color: #232A31;
+    padding: 0 2em; /* Para os elementos não ficarem muito próximos das extremidades da tela. 0 em cima e em baixo, e 2em na esquerda e direita*/
+    position: relative;
+    box-sizing: border-box; /* Para os elementos não parassarem do limite das bordas */
+}
+
+.logo {
+    width: 50px;
+    margin-top: 15px;
+}
+
+nav {
+    position: relative;
+}
+
+.navbar-items {
+    list-style: none; /* Para retirar o símbolo de bolinha na esquerda que é padrão de lista do HTML */
+    position: absolute;
+    display: inline-block; /* Para posicioná-los um do lado do outro */
+    height: 80px; /* mesma altura da navbar*/
+    line-height: 80px; /* para alinhar o centro na vertical */
+    margin: 0;
+    right: 0; /* Para posicioná-los na direita do site */
+}
+
+.navbar-items li {
+    display: inline-block; /* Para definí-los um do lado do outro */
+    text-transform: uppercase; /* Para deixálos em letra maiúscula */
+    margin-left: 25px; /* Para descolar um do outro */
+}
+
+.navbar-items li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.navbar-items li a:hover {
+    color: #CCC;
+}
+
+.default-btn {
+    padding: 15px 20px; /* botão: 15px cima e baixo, 20px altura e largura */
+    background-color: #2CC76A;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.default-btn:hover {
+    background-color: #22BB5F;
+}
+
+/* MAIN BANNER */
+
+.main-banner {
+    background-image: url('img/mainbanner.png');
+    background-size: cover; /* Tenta aproveitar a imagem toda  */
+    background-position: center;
+    padding: 10em 0;
+    position: relative;
+}
+
+.main-banner h1, .main-banner p {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-banner h1 {
+    font-size: 65px;
+}
+
+.main-banner p {
+    font-size: 32px;
+}
+
+/* ESPECIALIDADES */ 
+
+.specialties-container {
+    padding: 5em 0; /* Técnica para centralizar o conteúdo*/
+}
+
+.specialties-container ul {
+    display: flex;
+    width: 90%;
+    position: relative; /* Para centralizar na horizontal */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.specialties-container ul li {
+    flex: 1 1 200px; /* shorthand: <grow> <shrink> <basis> */
+    list-style: none;
+    text-align: center;
+    padding: 20px; /* Espaçamento das bordas */
+}
+
+.fas {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.fa-shield-alt {
+    color: #2CC76A;
+}
+
+.fa-rocket {
+    color: #EF3F29;
+}
+
+.fa-comments {
+    color: #EF8F29;
+}
+
+.specialties-container ul li h3 {
+    margin-bottom: 25px;
+}
+
+.specialties-container ul li p {
+    line-height: 24px; /* Para aumentar a altura entre as linhas do texto */
+}
+
+/* PREÇOS */
+
+.pricing-container {
+    padding-bottom: 5em; /* Para centralizar os elementos */
+    text-align: center;
+}
+
+.pricing-container h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.pricing-container p {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-between; /* Os elementos estarão espaçados entre eles com a área útil disponível na div */
+    margin-top: 50px;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan {
+    flex: 1 1 200px;
+    max-width: 275px;
+    margin-left: 20px; /* para espaçar um do outro */
+    margin-right: 20px; /* para espaçar um do outro */
+}
+
+.plan ul {
+    padding: 0;
+}
+
+.plan li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    background-color: #E8E9EA;
+    color: #333;
+}
+
+.plan .price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Para formar um círculo */
+    background-color: #2CC762;
+    color: #FFF;
+    text-align: center;
+    line-height: 120px;
+    font-size: 18px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+}
+
+.plan .plan-name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #202B34;
+    padding-top: 50px; /* Para caber o círculo nessa div */
+    padding-bottom: 20px; /* Para dar um espaçamento */
+}
+
+.plan .plan-btn {
+    background-color: #2CC762;
+    color: #FFF;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+.plan .recommended {
+    background-color: #F45C57;
+}
+
+/* BUSCAR DOMÍNIO */
+
+.searchdomain-container {
+    background-color: #34454E;
+    text-align: center;
+    padding: 5em 0;
+}
+
+.searchdomain-container h2 {
+    color: #FFF;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.searchdomain-container p {
+    color: #D5D5D5;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.searchdomain-container input {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.searchdomain-container input[type=text] {
+    margin-bottom: 25px; /* para espaçar do submit */
+    width: 60%;
+    padding: 20px; /* espaçamento entre a fonte e o input */
+    font-size: 20px;
+}
+
+.searchdomain-container input[type=submit] {
+    background-color: #2CC76A;
+    padding: 15px 30px; /* Para simular um botão */
+    color: #FFF;
+    font-size: 24px;
+}
+
+/* CONTATO */
+
+.contact-container {
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 2em;
+}
+
+.contact-container h2 {
+    font-size: 36px;
+}
+
+.contact-container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-container textarea {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 468px;
+    height: 150px;
+}
+
+.contact-container input[type=submit] {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2CC76A;
+    color: #FFF;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+/* MEDIA QUERIES */ 
+/* São break points que delimitam pixels da resolução da tela que 
+a partir deles o layoult se comportará de forma diferente */
+
+ @media screen and (max-width: 1100px) {
+
+	.plans-container {
+		width: 95%;
+	}
+
+	.plan {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+} 
+
+@media screen and (max-width: 900px) {
+
+	.plans-container, .specialties-container ul {
+		flex-wrap: wrap;
+	}
+
+} 
+
+@media screen and (max-width: 576px) {
+
+	.navbar-items li {
+		font-size: 12px;
+		margin-left: 10px;
+	}
+
+	html, body {
+	  overflow-x:hidden 
+	}
+
+	.plan {
+		max-width: 100%;
+	}
+
+	.searchdomain-container {
+		padding: 3em 2em;
+	}
+
+	.container .searchdomain-container input {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.contact-container {
+		padding: 3em 2em;
+	}
+
+	.contact-container input, .contact-container textarea {
+		width: 100%;
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		box-sizing: border-box;
+	}
+}
